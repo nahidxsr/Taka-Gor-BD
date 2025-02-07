@@ -16,21 +16,30 @@
         <form id="registrationForm">
             <h2>Create Your Account</h2>
 
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
-
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
-
+            <!-- Referral Code -->
             <label for="referralCode">Referral ID (Optional):</label>
             <input type="text" id="referralCode" name="referralCode">
 
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="text" id="phoneNumber" name="phoneNumber" required>
+            <!-- Name Fields (Side by Side) -->
+            <div class="name-container">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <!-- Phone & Email (One Required) -->
+            <label for="phoneNumber">Phone Number (Optional):</label>
+            <input type="text" id="phoneNumber" name="phoneNumber">
 
+            <label for="email">Email Address (Optional):</label>
+            <input type="email" id="email" name="email">
+
+            <!-- Password & Confirm Password -->
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
