@@ -1,43 +1,74 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
     text-align: center;
     padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 form {
-    background-color: white;
+    background: white;
     padding: 20px;
-    margin: 50px auto;
-    width: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
 }
 
-label, input {
+h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
     width: 100%;
     padding: 8px;
-    margin: 10px 0;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+/* Name Fields Side by Side */
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-container div {
+    width: 48%;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
 }
