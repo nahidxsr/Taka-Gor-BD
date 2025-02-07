@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Taka Gor BD</h1>
+        <h1>Taka<span style="color: green;">Gor</span> BD</h1>
     </header>
 
     <!-- Registration Form -->
@@ -16,9 +16,9 @@
         <form id="registrationForm">
             <h2>Create Your Account</h2>
 
-            <!-- Referral Code -->
+            <!-- Referral Code (Top) -->
             <label for="referralCode">Referral ID (Optional):</label>
-            <input type="text" id="referralCode" name="referralCode">
+            <input type="text" id="referralCode" name="referralCode" placeholder="Enter Referral ID">
 
             <!-- Name Fields (Side by Side) -->
             <div class="name-container">
@@ -32,21 +32,22 @@
                 </div>
             </div>
 
-            <!-- Phone & Email (One Required) -->
-            <label for="phoneNumber">Phone Number (Optional):</label>
-            <input type="text" id="phoneNumber" name="phoneNumber">
+            <!-- Email or Phone (Single Input Field) -->
+            <label for="contact">Email or Phone:</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
 
-            <label for="email">Email Address (Optional):</label>
-            <input type="email" id="email" name="email">
-
-            <!-- Password & Confirm Password -->
+            <!-- Password Fields -->
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-            <button type="submit">Register</button>
+            <!-- Register Button -->
+            <button type="submit">REGISTER</button>
+
+            <!-- Already Registered -->
+            <p><a href="login.html">Already registered?</a></p>
         </form>
     </main>
 
