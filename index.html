@@ -1,57 +1,56 @@
 <!doctype html>
-<html lang="bn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taka Gor BD - Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
+<html lang="bn"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Taka Gor BD - Dashboard</title> 
+  <link rel="stylesheet" href="dashboard.css"> 
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+ </head> 
+ <body> 
+  <!-- Scrolling Notice (Train Effect) --> 
+  <div class="notice-container"> 
+   <div class="notice-track"> 
+     <span>📢 আমাদের টেলিগ্রাম চ্যানেলে জয়েন করুন - নতুন অফার এবং তথ্য পেতে! |</span> 
+     <span> নতুন আপডেট আসছে! সক্রিয় থাকুন! |</span> 
+     <span> দ্রুত ইনকাম করুন এবং রেফারাল বোনাস পান! |</span> 
+   </div> 
+  </div> 
+  
+  <!-- Header --> 
+  <header> 
+   <h1>Taka Gor BD</h1> 
+  </header> 
 
-    <!-- Scrolling Notice (Train Effect) -->
-    <div class="notice-container">
-        <div class="notice-track">
-            <span>📢 আমাদের টেলিগ্রাম চ্যানেলে জয়েন করুন - নতুন অফার এবং তথ্য পেতে! |</span>
-            <span> নতুন আপডেট আসছে! সক্রিয় থাকুন! |</span>
-            <span> দ্রুত ইনকাম করুন এবং রেফারাল বোনাস পান! |</span>
-        </div>
-    </div>
+  <!-- ID Activation Popup --> 
+  <div class="popup" id="activationPopup"> 
+   <div class="popup-content"> 
+    <p>⚠ অনুগ্রহ করে আপনার আইডি একটিভ করুন!</p> 
+    <a href="https://nahidxsr.github.io/account-active-/" class="activate-btn">Active Now</a> 
+   </div> 
+  </div>
 
-    <!-- Header -->
-    <header>
-        <h1>Taka Gor BD</h1>
-    </header>
+  <!-- Balance Section --> 
+  <section class="balance-section"> 
+   <h2>আপনার ব্যালেন্স</h2> 
+   <p>💰 <span id="userBalance">0</span> ≈ <b>৳<span id="userTaka">0</span></b></p> 
+   <a href="https://nahidxsr.github.io/account-active-/" class="activate-btn">Active Now</a>
+  </section> 
 
-    <!-- ID Activation Popup -->
-    <div class="popup" id="activationPopup">
-        <div class="popup-content">
-            <p>⚠ অনুগ্রহ করে আইডিটি একটিভ করুন</p>
-            <!-- Updated link here -->
-            <a href="https://nahidxsr.github.io/account-active-/" class="activate-btn">Active Now</a>
-        </div>
-    </div>
+  <!-- Telegram Join --> 
+  <section class="telegram-section"> 
+   <p>📢 আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন</p> 
+   <a href="https://t.me/takagorbd" class="join-btn">Join Telegram</a> 
+  </section> 
 
-    <!-- Balance Section -->
-    <section class="balance-section">
-        <h2>আপনার ব্যালেন্স</h2>
-        <p>💰 <span id="userBalance">0</span> ≈ <b>৳<span id="userTaka">0</span></b></p>
-    </section>
+  <!-- Bottom Navigation --> 
+  <nav class="bottom-nav"> 
+    <a href="withdraw.html"><i class="fas fa-wallet"></i> Withdraw</a> 
+    <a href="referral.html"><i class="fas fa-user-friends"></i> Referral</a> 
+    <a href="balance.html"><i class="fas fa-money-bill-wave"></i> Balance</a> 
+    <a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a> 
+  </nav> 
 
-    <!-- Telegram Join -->
-    <section class="telegram-section">
-        <p>📢 আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন</p>
-        <a href="https://t.me/takagorbd" class="join-btn">Join Telegram</a>
-    </section>
-
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-        <a href="withdraw.html"><i class="fas fa-wallet"></i> Withdraw</a>
-        <a href="referral.html"><i class="fas fa-user-friends"></i> Referral</a>
-        <a href="balance.html"><i class="fas fa-money-bill-wave"></i> Balance</a>
-        <a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a>
-    </nav>
-
-    <script src="script.js"></script>
-</body>
+  <script src="dashboard.js"></script> 
+ </body>
 </html>
