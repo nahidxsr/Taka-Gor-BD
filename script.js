@@ -43,7 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Bottom navigation menu button click events
     document.querySelectorAll('.bottom-nav a').forEach(function (navBtn) {
-        navBtn.addEventListener('click', function () {
+        navBtn.addEventListener('click', function (event) {
+            event.preventDefault(); // পেজ রিফ্রেশ হওয়ার থেকে বাধা দিবে
+
             // বাটনে ক্লিক করলে স্লাইড এফেক্ট দেখাবে
             navBtn.classList.add('active');
             setTimeout(function () {
