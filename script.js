@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!loggedInUser) {
         // 🔒 যদি কেউ লগইন না করে ড্যাশবোর্ডে ঢোকার চেষ্টা করে, তাহলে সরাসরি লগইন পেজে পাঠিয়ে দেওয়া হবে
         window.location.href = "https://nahidxsr.github.io/login/";
-        return; // নিচের কোড রান বন্ধ করতে
+        return;
     }
 
     // ✅ ইউজারের ব্যালেন্স লোড করা
@@ -17,22 +17,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ✅ পপআপ চেক করা (ID একটিভ করা হয়েছে কি না)
     let popup = document.getElementById("activationPopup");
+    let isActivated = localStorage.getItem("isActivated");
 
-    if (popup) {
-        let isActivated = localStorage.getItem("isActivated");
+    if (!isActivated) {
+        popup.style.display = "block"; // যতক্ষণ না Active করবে ততক্ষণ থাকবে
+    }
 
-        if (!isActivated) {
-            popup.style.display = "block"; // 🟢 পপআপ চালু থাকবে যতক্ষণ না অ্যাক্টিভ হয়
-        }
-
-        // ✅ "Active Now" বাটন ক্লিক করলে `account-active-` পেজে নিয়ে যাবে
-        let activateBtn = document.querySelector(".activate-btn");
-        if (activateBtn) {
-            activateBtn.addEventListener("click", function () {
-                window.location.href = "https://nahidxsr.github.io/account-active-/";
-            });
-        }
-    } else {
-        console.error("❌ পপআপ এলিমেন্ট পাওয়া যায়নি!");
+    // ✅ "Active Now" বাটন ক্লিক করলে active.html পেজে যাবে
+    let activateBtn = document.querySelector(".activate-btn");
+    if (activateBtn) {
+        activateBtn.addEventListener("click", function () {
+            window.location.href = "https://nahidxsr.github.io/account-active-/"; // **সঠিক পেজে যাবে**
+        });
     }
 });
