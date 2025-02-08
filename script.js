@@ -22,20 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let isActivated = localStorage.getItem("isActivated");
 
         if (!isActivated) {
-            popup.style.display = "block";
-
-            // ৫ সেকেন্ড পর পপআপ অটো বন্ধ হবে
-            setTimeout(() => {
-                popup.style.display = "none";
-            }, 5000);
+            popup.style.display = "block"; // 🟢 পপআপ চালু থাকবে যতক্ষণ না অ্যাক্টিভ হয়
         }
 
-        // ✅ "Active Now" বাটন ক্লিক করলে পপআপ বন্ধ হবে
+        // ✅ "Active Now" বাটন ক্লিক করলে `account-active-` পেজে নিয়ে যাবে
         let activateBtn = document.querySelector(".activate-btn");
         if (activateBtn) {
             activateBtn.addEventListener("click", function () {
-                localStorage.setItem("isActivated", "true");
-                popup.style.display = "none";
+                window.location.href = "https://nahidxsr.github.io/account-active-/";
             });
         }
     } else {
