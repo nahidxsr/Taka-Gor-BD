@@ -38,7 +38,7 @@ header {
 
 /* ✅ পপআপ ডিজাইন */
 .popup {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -47,6 +47,7 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .popup-content {
@@ -65,9 +66,10 @@ header {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     color: red;
+    font-weight: bold;
 }
 
 .activate-btn {
@@ -128,6 +130,11 @@ header {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.telegram-section p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .join-btn {
     display: inline-block;
     background-color: #0088cc;
@@ -160,6 +167,9 @@ header {
     color: black;
     font-size: 14px;
     text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .bottom-nav i {
@@ -168,6 +178,12 @@ header {
     margin-bottom: 5px;
 }
 
+/* 🎨 Bottom Navigation কালার স্টাইল */
+.bottom-nav a:nth-child(1) { color: #ff3333; } /* Withdraw */
+.bottom-nav a:nth-child(2) { color: #0088cc; } /* Referral */
+.bottom-nav a:nth-child(3) { color: #28a745; } /* Balance */
+.bottom-nav a:nth-child(4) { color: #ff8800; } /* Help Center */
+
 .bottom-nav a:hover {
-    color: red;
+    filter: brightness(1.2);
     }
