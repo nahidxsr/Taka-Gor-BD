@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // লগইন ইউজারের তথ্য লোকাল স্টোরেজ থেকে আনো
     let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
     // যদি ইউজার লগইন না করে, তাহলে লগইন পেজে রিডাইরেক্ট করবে
@@ -8,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // ব্যালেন্স সেটআপ করা হচ্ছে
+    // ব্যালেন্স সেটআপ
     let balance = loggedInUser.balance || 0;
     let takaBalance = (balance / 100).toFixed(2); // দশমিক সহ দেখাবে
 
@@ -41,4 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.warn("⚠️ পপআপ এলিমেন্ট পাওয়া যায়নি!");
     }
+
+    // Bottom navigation menu button click events
+    document.querySelectorAll('.bottom-nav a').forEach(function (navBtn) {
+        navBtn.addEventListener('click', function () {
+            // বাটনে ক্লিক করলে স্লাইড এফেক্ট দেখাবে
+            navBtn.classList.add('active');
+            setTimeout(function () {
+                navBtn.classList.remove('active');
+            }, 200); // 200ms এর জন্য ইফেক্ট দেখাবে
+        });
+    });
 });
