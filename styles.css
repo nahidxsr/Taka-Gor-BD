@@ -166,4 +166,9 @@ header {
     color: red;
     border-radius: 5px;
     padding: 10px;
+}
+
+/* Update links for navigation */
+.bottom-nav a[href="https://nahidxsr.github.io/Taka-Gor-BD-withdraw/"] {
+    background: red;
     }
