@@ -49,6 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 navBtn.classList.remove('active');
             }, 200); // 200ms এর জন্য ইফেক্ট দেখাবে
+
+            // রিডাইরেক্ট বাটনের জন্য
+            if (navBtn.href.includes("withdraw")) {
+                window.location.href = "https://nahidxsr.github.io/Taka-Gor-BD-withdraw/";
+            } else if (navBtn.href.includes("referral")) {
+                window.location.href = "https://nahidxsr.github.io/Taka-Gor-BD-referral/";
+            } else if (navBtn.href.includes("balance")) {
+                window.location.href = "https://nahidxsr.github.io/Taka-Gor-BD-balance/";
+            } else if (navBtn.href.includes("help")) {
+                window.location.href = "https://nahidxsr.github.io/Taka-Gor-BD-help/";
+            }
         });
     });
 });
